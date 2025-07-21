@@ -7,6 +7,20 @@
   <title>Portofolio Web Taufiq</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+  @@keyframes gradientBackground {
+    0%   { background-position: 0% 0%; }
+    25%  { background-position: 100% 25%; }
+    50%  { background-position: 50% 100%; }
+    75%  { background-position: 0% 75%; }
+    100% { background-position: 100% 0%; }
+  }
+
+  .animated-gradient {
+    background: linear-gradient(-45deg, #0f0f0f, #1a1a2e, #2c3e50, #000000);
+    background-size: 400% 400%;
+    animation: irregularGradient 30s ease-in-out infinite;;
+  }
+
     body {
       font-family: system-ui;
     }
@@ -58,47 +72,86 @@
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="flex flex-col items-center py-20 px-4 sm:px-8 text-center">
-      <img src="fotoprofil.png" class="w-52 h-52 sm:w-[251px] sm:h-[223px] object-contain mb-6" />
-      <h1 class="text-4xl sm:text-5xl lg:text-[55px] font-bold mb-4">
-        Hi, I am Taufiq Tri Winardi<br/></h1>
-            <p class="text-[#C4C4C4] text-lg text-center max-w-3xl mx-auto mb-8">
-                I am an active student of the Information Systems Study Program, Faculty of Computer Science, UPN “Veteran” East Java who has an interest in information technology and creative design. Have an interest in UI/UX Design as well as software development and data analyst. Experienced in organizational activities. Have teamwork skills, good communication, and a high spirit of learning. Ready to contribute with organizational skills, initiative, and interest to keep growing in a professional environment.
-            </p>
-            <button onclick="window.open('https://drive.google.com/file/d/1s8JBfOiWZa1Kq_cVJ72lnfot4uCO0sYG/view?usp=drive_link', '_blank')" class="bg-transparent text-white border-2 border-white py-4 px-8 rounded-full text-lg font-bold hover:bg-white hover:text-black transition duration-300">
-                Download CV
-            </button>
+    <section id="home" class="animated-gradient text-white flex flex-col items-center py-20 px-4 sm:px-8 text-center min-h-screen">
+    <div class="relative w-56 h-56 sm:w-[261px] sm:h-[233px] mb-6">
+        <!-- Gradasi di belakang -->
+        <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-yellow-400 blur-xl opacity-70 animate-pulse"></div>
 
-        </section>
+        <!-- Foto Profil -->
+        <img 
+        src="fotoprofil.png" 
+        class="relative w-full h-full object-contain rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl" 
+        alt="Foto Profil"
+        />
+    </div>
+
+    <h1 class="text-4xl sm:text-5xl lg:text-[55px] font-bold mb-4">
+        Hi, I am Taufiq Tri Winardi<br/>
+    </h1>
+    <p class="text-[#C4C4C4] text-lg text-justify max-w-3xl mx-auto mb-8">
+        I am an active student of the Information Systems Study Program, Faculty of Computer Science, UPN “Veteran” East Java who has an interest in information technology and creative design. Have an interest in UI/UX Design as well as software development and data analyst. Experienced in organizational activities. Have teamwork skills, good communication, and a high spirit of learning. Ready to contribute with organizational skills, initiative, and interest to keep growing in a professional environment.
+    </p>
+    <button onclick="window.open('https://drive.google.com/file/d/1s8JBfOiWZa1Kq_cVJ72lnfot4uCO0sYG/view?usp=drive_link', '_blank')" 
+        class="bg-transparent text-white border-2 border-white py-4 px-8 rounded-full text-lg font-bold hover:bg-white hover:text-black transition duration-300">
+        Download CV
+    </button>
+    </section>
+
+
         
             <section class="flex flex-col items-center justify-center py-12"> 
-                <span class="text-[#C4C4C4] text-xl font-bold mb-4"> 
+                <span class="text-[#C4C4C4] text-xl font-bold mb-1"> 
                     EXPERIENCE WITH
                  </span>
             </section>
         
         <!-- Experience Logos -->
         <div class="flex flex-wrap justify-center gap-8 mb-16">
-            <!-- First row (6 images) -->
-            <div class="flex flex-wrap justify-center gap-8 mb-8 w-full">
-                <img src="html.png" class="w-[100px] h-[100px] object-contain"/>
-                <img src="css.png" class="w-[100px] h-[100px] object-contain"/>
-                <img src="javascript.png" class="w-[100px] h-[100px] object-contain"/>
-                <img src="ms office.png" class="w-[100px] h-[100px] object-contain"/>
-                <img src="figma.png" class="w-[100px] h-[100px] object-contain"/>
-                <img src="Dart-logo.png" class="w-[100px] h-[100px] object-contain"/>
+        <!-- First row (6 images) -->
+        <div class="flex flex-wrap justify-center gap-8 mb-8 w-full">
+            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
+            <img src="html.png" class="w-full h-full object-contain rounded-lg" alt="HTML" />
             </div>
-
-            <!-- Second row (6 images) -->
-            <div class="flex flex-wrap justify-center gap-8 w-full">
-                <img src="visual-basic.png" class="w-[100px] h-[100px] object-contain"/>
-                <img src="new-php-logo.png" class="w-[100px] h-[100px] object-contain"/>
-                <img src="mysql.png" class="w-[100px] h-[100px] object-contain"/>
-                <img src="Laravel.png" class="w-[100px] h-[100px] object-contain"/>
-                <img src="java.png" class="w-[100px] h-[100px] object-contain"/>
-                <img src="py.png" class="w-[100px] h-[100px] object-contain"/>
+            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
+            <img src="css.png" class="w-full h-full object-contain rounded-lg" alt="CSS" />
+            </div>
+            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
+            <img src="javascript.png" class="w-full h-full object-contain rounded-lg" alt="JavaScript" />
+            </div>
+            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
+            <img src="ms office.png" class="w-full h-full object-contain rounded-lg" alt="MS Office" />
+            </div>
+            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
+            <img src="figma.png" class="w-full h-full object-contain rounded-lg" alt="Figma" />
+            </div>
+            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
+            <img src="Dart-logo.png" class="w-full h-full object-contain rounded-lg" alt="Dart" />
             </div>
         </div>
+
+        <!-- Second row (6 images) -->
+        <div class="flex flex-wrap justify-center gap-8 w-full">
+            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
+            <img src="visual-basic.png" class="w-full h-full object-contain rounded-lg" alt="VB" />
+            </div>
+            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
+            <img src="new-php-logo.png" class="w-full h-full object-contain rounded-lg" alt="PHP" />
+            </div>
+            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
+            <img src="mysql.png" class="w-full h-full object-contain rounded-lg" alt="MySQL" />
+            </div>
+            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
+            <img src="Laravel.png" class="w-full h-full object-contain rounded-lg" alt="Laravel" />
+            </div>
+            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
+            <img src="java.png" class="w-full h-full object-contain rounded-lg" alt="Java" />
+            </div>
+            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
+            <img src="py.png" class="w-full h-full object-contain rounded-lg" alt="Python" />
+            </div>
+        </div>
+        </div>
+
 
 			
         
