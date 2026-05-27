@@ -1,426 +1,454 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portofolio Web Taufiq</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-  @@keyframes gradientBackground {
-    0%   { background-position: 0% 0%; }
-    25%  { background-position: 100% 25%; }
-    50%  { background-position: 50% 100%; }
-    75%  { background-position: 0% 75%; }
-    100% { background-position: 100% 0%; }
-  }
-
-  .animated-gradient {
-    background: linear-gradient(-45deg, #0f0f0f, #1a1a2e, #2c3e50, #000000);
-    background-size: 400% 400%;
-    animation: irregularGradient 30s ease-in-out infinite;;
-  }
-
-    body {
-      font-family: system-ui;
-    }
-
-    .card {
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .navbar-link:hover {
-      color: #FF855F;
-      transition: color 0.3s ease-in-out;
-    }
-
-    .fade-in {
-      animation: fadeIn 1s ease-in-out forwards;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    html {
-      scroll-padding-top: 80px;
-    }
-  </style>
+  <title>Taufiq Tri Winardi - Portfolio</title>
+  <meta name="description" content="Portfolio of Taufiq Tri Winardi, UI/UX Designer and Software Developer." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="bg-[#161513] text-white">
-  <div class="flex flex-col">
-    <!-- Navbar -->
-    <nav class="bg-[#222222] shadow-md fixed top-0 left-0 w-full z-50">
-      <div class="max-w-screen-xl mx-auto py-4 px-4 flex flex-wrap justify-center gap-4 sm:gap-12">
-        <a href="#home" class="text-white text-base sm:text-lg font-bold navbar-link">Home</a>
-        <a href="#projects" class="text-white text-base sm:text-lg font-bold navbar-link">Projects</a>
-        <a href="#experience" class="text-white text-base sm:text-lg font-bold navbar-link">Experience</a>
-        <a href="#contact" class="text-white text-base sm:text-lg font-bold navbar-link">Contact</a>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-content">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#experience" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#design" class="nav-link">Design UI/UX</a>
+      <a href="#achievements" class="nav-link">Achievements</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-container fade-up">
+      <div class="hero-image-wrapper">
+        <div class="profile-container">
+          <div class="profile-glow"></div>
+          <img src="fotoprofil.png" alt="Taufiq Tri Winardi" class="profile-img" />
+        </div>
       </div>
-    </nav>
-
-    <!-- Home Section -->
-    <section id="home" class="animated-gradient text-white flex flex-col items-center py-20 px-4 sm:px-8 text-center min-h-screen">
-    <div class="relative w-56 h-56 sm:w-[261px] sm:h-[233px] mb-6">
-        <!-- Gradasi di belakang -->
-        <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-yellow-400 blur-xl opacity-70 animate-pulse"></div>
-
-        <!-- Foto Profil -->
-        <img 
-        src="fotoprofil.png" 
-        class="relative w-full h-full object-contain rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl" 
-        alt="Foto Profil"
-        />
+      <div class="hero-text">
+        <h1 class="hero-title">
+          Hi, I am <br /> <span class="text-gradient">Taufiq Tri Winardi</span>
+        </h1>
+        <p class="hero-desc">
+          I am an active student of the Information Systems Study Program, Faculty of Computer Science, UPN “Veteran”
+          East Java. I have an interest in UI/UX Design, software development, and data analysis. I'm ready to
+          contribute with organizational skills, initiative, and a high spirit of learning.
+        </p>
+        <button
+          onclick="window.open('https://drive.google.com/file/d/1s8JBfOiWZa1Kq_cVJ72lnfot4uCO0sYG/view?usp=drive_link', '_blank')"
+          class="btn-primary">
+          Download CV
+        </button>
+      </div>
     </div>
+  </section>
 
-    <h1 class="text-4xl sm:text-5xl lg:text-[55px] font-bold mb-4">
-        Hi, I am Taufiq Tri Winardi<br/>
-    </h1>
-    <p class="text-[#C4C4C4] text-lg text-justify max-w-3xl mx-auto mb-8">
-        I am an active student of the Information Systems Study Program, Faculty of Computer Science, UPN “Veteran” East Java who has an interest in information technology and creative design. Have an interest in UI/UX Design as well as software development and data analyst. Experienced in organizational activities. Have teamwork skills, good communication, and a high spirit of learning. Ready to contribute with organizational skills, initiative, and interest to keep growing in a professional environment.
-    </p>
-    <button onclick="window.open('https://drive.google.com/file/d/1s8JBfOiWZa1Kq_cVJ72lnfot4uCO0sYG/view?usp=drive_link', '_blank')" 
-        class="bg-transparent text-white border-2 border-white py-4 px-8 rounded-full text-lg font-bold hover:bg-white hover:text-black transition duration-300">
-        Download CV
-    </button>
-    </section>
-
-
-        
-            <section class="flex flex-col items-center justify-center py-12"> 
-                <span class="text-[#C4C4C4] text-xl font-bold mb-1"> 
-                    EXPERIENCE WITH
-                 </span>
-            </section>
-        
-        <!-- Experience Logos -->
-        <div class="flex flex-wrap justify-center gap-8 mb-16">
-        <!-- First row (6 images) -->
-        <div class="flex flex-wrap justify-center gap-8 mb-8 w-full">
-            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
-            <img src="html.png" class="w-full h-full object-contain rounded-lg" alt="HTML" />
-            </div>
-            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
-            <img src="css.png" class="w-full h-full object-contain rounded-lg" alt="CSS" />
-            </div>
-            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
-            <img src="javascript.png" class="w-full h-full object-contain rounded-lg" alt="JavaScript" />
-            </div>
-            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
-            <img src="ms office.png" class="w-full h-full object-contain rounded-lg" alt="MS Office" />
-            </div>
-            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
-            <img src="figma.png" class="w-full h-full object-contain rounded-lg" alt="Figma" />
-            </div>
-            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
-            <img src="Dart-logo.png" class="w-full h-full object-contain rounded-lg" alt="Dart" />
-            </div>
-        </div>
-
-        <!-- Second row (6 images) -->
-        <div class="flex flex-wrap justify-center gap-8 w-full">
-            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
-            <img src="visual-basic.png" class="w-full h-full object-contain rounded-lg" alt="VB" />
-            </div>
-            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
-            <img src="new-php-logo.png" class="w-full h-full object-contain rounded-lg" alt="PHP" />
-            </div>
-            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
-            <img src="mysql.png" class="w-full h-full object-contain rounded-lg" alt="MySQL" />
-            </div>
-            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
-            <img src="Laravel.png" class="w-full h-full object-contain rounded-lg" alt="Laravel" />
-            </div>
-            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
-            <img src="java.png" class="w-full h-full object-contain rounded-lg" alt="Java" />
-            </div>
-            <div class="w-[100px] h-[100px] rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 p-2 transition-transform transform hover:scale-110 hover:shadow-xl">
-            <img src="py.png" class="w-full h-full object-contain rounded-lg" alt="Python" />
-            </div>
-        </div>
-        </div>
-
-
-			
-        
-        <!-- Projects Section -->
-        <section id="projects" class="bg-[#2A2A2A] py-16">
-            <h2 class="text-orange-600 text-3xl font-bold text-center mb-6">Projects</h2>
-            <div class="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- Card 1 -->
-            <div class="bg-[#3A3A3A] p-6 rounded-xl flex flex-col transition-transform hover:scale-105 hover:shadow-2xl">
-                <img src="ProgramKasir.png" class="w-full h-[235px] object-fill mb-4" />
-                <h3 class="text-white text-xl font-bold">PROGRAM KASIR</h3>
-                <p class="text-[#C4C4C4] text-justify text-sm mb-9">This Cashier Program is made with the Netbeans IDE using the java language, in this program which contains the basics about CRUD on the cash register system.</p>
-                <p class="text-[#C4C4C4] text-sm mt-14">Visit the GitHub repository for more details:</p>
-                <button onclick="window.open('https://github.com/TaufiqTri08/ProgramKasirJava', '_blank')" class="bg-orange-500 text-white py-2 px-6 rounded-full hover:bg-orange-600 transition duration-300 mt-auto font-bold">Click Here to Visit</button>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="bg-[#3A3A3A] p-6 rounded-xl flex flex-col transition-transform hover:scale-105 hover:shadow-2xl">
-                <img src="ManajemenMusik.png" class="w-full h-[235px] object-fill mb-4" />
-                <h3 class="text-white text-xl font-bold">PROGRAM MANAJEMEN MUSIK</h3>
-                <p class="text-[#C4C4C4] text-justify text-sm mb-4">This music library program was created with the Netbeans IDE using the java language, in this program which contains how to manage the music library using stacks and queues.</p>
-                <p class="text-[#C4C4C4] text-sm mt-14">Visit the GitHub repository for more details:</p>
-                <button onclick="window.open('https://github.com/TaufiqTri08/ProgramManajemenMusicJava', '_blank')" class="bg-orange-500 text-white py-2 px-6 rounded-full hover:bg-orange-600 transition duration-300 mt-auto font-bold">Click Here to Visit</button>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="bg-[#3A3A3A] p-6 rounded-xl flex flex-col transition-transform hover:scale-105 hover:shadow-2xl">
-                <img src="ProgramVb.png" class="w-full h-[235px] object-fill mb-4" />
-                <h3 class="text-white text-xl font-bold">PROGRAM APLIKASI DESKTOP KASIR</h3>
-                <p class="text-[#C4C4C4] text-justify text-sm mb-4">This desktop cashier application program was created using the Visual Studio IDE with the Visual Basic language, this program contains a system at the cash register.</p>
-                <p class="text-[#C4C4C4] text-sm mt-14">Visit the GitHub repository for more details:</p>
-                <button onclick="window.open('https://github.com/TaufiqTri08/ProgramKasirVBnet', '_blank')" class="bg-orange-500 text-white py-2 px-6 rounded-full hover:bg-orange-600 transition duration-300 mt-auto font-bold">Click Here to Visit</button>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="bg-[#3A3A3A] p-6 rounded-xl flex flex-col transition-transform hover:scale-105 hover:shadow-2xl">
-                <img src="IdereMobile.png" class="w-full h-[235px] object-fill mb-4" />
-                <h3 class="text-white text-xl font-bold">APLIKASI MOBILE IDERE</h3>
-                <p class="text-[#C4C4C4] text-justify text-sm mb-4">This application program was created using Android Studio with the java language and sqlite storage, this mobile application contains the submission of innovator funding to investors.</p>
-                <p class="text-[#C4C4C4] text-sm mt-14">Visit the GitHub repository for more details:</p>
-                <button onclick="window.open('https://github.com/TaufiqTri08/IdereMobileApps', '_blank')" class="bg-orange-500 text-white py-2 px-6 rounded-full hover:bg-orange-600 transition duration-300 mt-auto font-bold">Click Here to Visit</button>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="bg-[#3A3A3A] p-6 rounded-xl flex flex-col transition-transform hover:scale-105 hover:shadow-2xl">
-                <img src="GameRap.png" class="w-full h-[235px] object-fill mb-4" />
-                <h3 class="text-white text-xl font-bold">GAME RAPTOR PUKUL HEWAN</h3>
-                <p class="text-[#C4C4C4] text-justify text-sm mb-9">This pop up animal game program is made using Raptor, which is a basic application used for flowcharts with logic that can be controlled so that it can become a program.</p>
-                <p class="text-[#C4C4C4] text-sm mt-14">Visit the GitHub repository for more details:</p>
-                <button onclick="window.open('https://drive.google.com/file/d/1gbRB6iwhhQRZf3yuhmE6xE5-ScGg106H/view?usp=drive_link', '_blank')" class="bg-orange-500 text-white py-2 px-6 rounded-full hover:bg-orange-600 transition duration-300 mt-auto font-bold">Click Here to Download</button>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="bg-[#3A3A3A] p-6 rounded-xl flex flex-col transition-transform hover:scale-105 hover:shadow-2xl">
-                <img src="IdereWeb.png" class="w-full h-[235px] object-fill mb-4" />
-                <h3 class="text-white text-xl font-bold">WEBSITE IDERE</h3>
-                <p class="text-[#C4C4C4] text-justify text-sm mb-4">This website program was created using Visual Studio Code with the php language and the Laravel framework, this website contains applications for innovator funding to investors.</p>
-                <p class="text-[#C4C4C4] text-sm mt-14">Visit the GitHub repository for more details:</p>
-                <button onclick="window.open('https://github.com/TaufiqTri08/IdereWebsite', '_blank')" class="bg-orange-500 text-white py-2 px-6 rounded-full hover:bg-orange-600 transition duration-300 mt-auto font-bold">Click Here to Visit</button>
-            </div>
-        </div>
-        </section>
-
-
-        <!-- Projects Section -->
-
-<!-- Design UI/UX Section -->
-        <section id="projects" class="bg-[#2A2A2A] py-16">
-            <h2 class="text-[#6600FF] text-3xl font-bold text-center mb-6">Design UI/UX</h2>
-            <div class="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Card 1 -->
-            <div class="bg-[#3A3A3A] p-6 rounded-xl transition-transform hover:scale-105 hover:shadow-2xl">
-                <img src="Teachlink.png" class="w-full h-[235px] object-fill mb-4"/>
-                <h3 class="text-white text-xl font-bold">Teach link Point</h3>
-                <p class="text-[#C4C4C4] text-sm mb-4"></p>
-                <button onclick="window.open('https://www.figma.com/proto/Neq3VCL2QA85sJmA598uP4/Workspace-C.A.T-Boys?node-id=2004-19976&t=SdddDU2Bsp8MX8YH-1', '_blank')" class="bg-[#6600FF] text-white py-2 px-6 rounded-full hover:bg-[#4b00b3] transition duration-300 mt font-bold">Click Here to Visit</button>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="bg-[#3A3A3A] p-6 rounded-xl transition-transform hover:scale-105 hover:shadow-2xl">
-                <img src="CitaKlusi.png" class="w-full h-[235px] object-fill mb-4"/>
-                <h3 class="text-white text-xl font-bold">CitaKlusi</h3>
-                <p class="text-[#C4C4C4] text-sm mb-4"></p>
-                <button onclick="window.open('https://www.figma.com/proto/Neq3VCL2QA85sJmA598uP4/Workspace-C.A.T-Boys?node-id=1029-8157&t=SdddDU2Bsp8MX8YH-1', '_blank')" class="bg-[#6600FF] text-white py-2 px-6 rounded-full hover:bg-[#4b00b3] transition duration-300 font-bold">Click Here to Visit</button>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="bg-[#3A3A3A] p-6 rounded-xl transition-transform hover:scale-105 hover:shadow-2xl">
-                <img src="RentPlace.png" class="w-full h-[235px] object-fill mb-4"/>
-                <h3 class="text-white text-xl font-bold">RentPlace</h3>
-                <p class="text-[#C4C4C4] text-sm mb-4"></p>
-                <button onclick="window.open('https://www.figma.com/proto/jfhv07mPXnW8yd43ZNKj07/ADSI-RentPlace?node-id=0-1&t=pV6vRo7wfA3dh4GD-1', '_blank')" class="bg-[#6600FF] text-white py-2 px-6 rounded-full hover:bg-[#4b00b3] transition duration-300 font-bold">Click Here to Visit</button>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="bg-[#3A3A3A] p-6 rounded-xl transition-transform hover:scale-105 hover:shadow-2xl">
-                <img src="bgn.png" class="w-full h-[235px] object-fill mb-4"/>
-                <h3 class="text-white text-xl font-bold">BGN Mart</h3>
-                <p class="text-[#C4C4C4] text-sm mb-4"></p>
-                <button class="bg-[#6600FF] text-white py-2 px-6 rounded-full hover:bg-[#4b00b3] transition duration-300 font-bold">Click Here to Visit</button>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="bg-[#3A3A3A] p-6 rounded-xl transition-transform hover:scale-105 hover:shadow-2xl">
-                <img src="IdeRe.png" class="w-full h-[235px] object-fill mb-4"/>
-                <h3 class="text-white text-xl font-bold">IdeRe</h3>
-                <p class="text-[#C4C4C4] text-sm mb-4"></p>
-                <button onclick="window.open('https://www.figma.com/proto/4UirhIM8n3D4o7XirAcVPK/IDERE--P.MOB-?node-id=0-1&t=O8iao9b4kBnhgCgL-1', '_blank')" class="bg-[#6600FF] text-white py-2 px-6 rounded-full hover:bg-[#4b00b3] transition duration-300 font-bold">Click Here to Visit</button>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="bg-[#3A3A3A] p-6 rounded-xl transition-transform hover:scale-105 hover:shadow-2xl">
-                <img src="Dropzone.png" class="w-full h-[235px] object-fill mb-4"/>
-                <h3 class="text-white text-xl font-bold">Dropzone</h3>
-                <p class="text-[#C4C4C4] text-sm mb-4"></p>
-                <button onclick="window.open('https://www.figma.com/proto/zOwEqhx2TH3PpvAoockfFy/Dropzone--E-business--V.1?node-id=0-1&t=oWydkGKPJ7egcfjb-1', '_blank')" class="bg-[#6600FF] text-white py-2 px-6 rounded-full hover:bg-[#4b00b3] transition duration-300 font-bold">Click Here to Visit</button>
-            </div>
-
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="py-16 bg-[#1a1a1a] ">
-            <h2 class="text-[#5BADFF] text-3xl font-bold text-center mb-10">Experience</h2>
-            <div class="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 px-4">
-                <!-- Experience Items -->
-                <!-- Item 1 -->
-                <div class="bg-[#2A2A2A] p-4 rounded-xl shadow-md">
-                    <div class="w-full aspect-video mb-4 rounded-md overflow-hidden border border-gray-600">
-                        <iframe class="w-full h-full" src="https://drive.google.com/file/d/1VJZe_YnULuuNHxI9l8LHzXYF3Y3_TBYE/preview" allow="autoplay"></iframe>
-                    </div>
-                    <h3 class="text-white text-2xl font-bold">Competition</h3>
-                    <span class="text-[#8491A0] text-sm">INDONERIS 2024</span>
-                    <p class="text-[#C4C4C4] text-sm mt-4">3rd Runner-up UI/UX Design</p>
-                    <button onclick="window.open('https://drive.google.com/file/d/1VJZe_YnULuuNHxI9l8LHzXYF3Y3_TBYE/view?usp=drive_link', '_blank')" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full text-sm font-semibold transition duration-300 mt-4">Click Here to Visit</button>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="bg-[#2A2A2A] p-4 rounded-xl shadow-md">
-                    <div class="w-full aspect-video mb-4 rounded-md overflow-hidden border border-gray-600">
-                        <iframe class="w-full h-full" src="https://drive.google.com/file/d/1LuDC7ucrwUTGews9nHqVXZV54qGDYCEU/preview" allow="autoplay"></iframe>
-                    </div>
-                    <h3 class="text-white text-2xl font-bold">Competition</h3>
-                    <span class="text-[#8491A0] text-sm">UINIC 6.0 2024</span>
-                    <p class="text-[#C4C4C4] text-sm mt-4">CAT Boys | Best Favorite Project UI/UX Design</p>
-                    <button onclick="window.open('https://drive.google.com/drive/folders/1VQ6va9IenksjktW5QcYPV7hzMUsxaDck?usp=drive_link', '_blank')" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full text-sm font-semibold transition duration-300 mt-4">Click Here to Visit</button>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="bg-[#2A2A2A] p-4 rounded-xl shadow-md">
-                    <div class="w-full aspect-video mb-4 rounded-md overflow-hidden border border-gray-600">
-                        <iframe class="w-full h-full" src="https://drive.google.com/file/d/11XmFyoreSfiuiNNG7MsdC1rXhevBtqPD/preview" allow="autoplay"></iframe>
-                    </div>
-                    <h3 class="text-white text-2xl font-bold">Academy Class</h3>
-                    <span class="text-[#8491A0] text-sm">DICODING</span>
-                    <p class="text-[#C4C4C4] text-sm mt-4">Learn Google Cloud Basics</p>
-                    <button onclick="window.open('https://www.dicoding.com/certificates/NVP7QVEW4ZR0', '_blank')" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full text-sm font-semibold transition duration-300 mt-4">Click Here to Visit</button>
-                </div>
-
-                <!-- Item 4 -->
-                <div class="bg-[#2A2A2A] p-4 rounded-xl shadow-md">
-                    <div class="w-full aspect-video mb-4 rounded-md overflow-hidden border border-gray-600">
-                        <iframe class="w-full h-full" src="https://drive.google.com/file/d/1aQnksaxvgvWdG2Y9bwltLGUtSZ4f5VHR/preview" allow="autoplay"></iframe>
-                    </div>
-                    <h3 class="text-white text-2xl font-bold">Academy Class</h3>
-                    <span class="text-[#8491A0] text-sm">DICODING</span>
-                    <p class="text-[#C4C4C4] text-sm mt-4">Learn Cloud Basics and Gen AI on AWS</p>
-                    <button onclick="window.open('https://www.dicoding.com/certificates/JMZVDR08OZN9', '_blank')" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full text-sm font-semibold transition duration-300 mt-4">Click Here to Visit</button>
-                </div>
-
-                <!-- Item 5 -->
-                <div class="bg-[#2A2A2A] p-4 rounded-xl shadow-md">
-                    <div class="w-full aspect-video mb-4 rounded-md overflow-hidden border border-gray-600">
-                        <iframe class="w-full h-full" src="https://drive.google.com/file/d/1ck84YSqDviSDXNMP4J-4x7tpFdkILqCQ/preview" allow="autoplay"></iframe>
-                    </div>
-                    <h3 class="text-white text-2xl font-bold">Academy Class</h3>
-                    <span class="text-[#8491A0] text-sm">DICODING</span>
-                    <p class="text-[#C4C4C4] text-sm mt-4">Learn Basic Project Management</p>
-                    <button onclick="window.open('https://www.dicoding.com/certificates/JMZVVQ5O3ZN9', '_blank')" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full text-sm font-semibold transition duration-300 mt-4">Click Here to Visit</button>
-                </div>
-                <!-- Item 6 -->
-                <div class="bg-[#2A2A2A] p-4 rounded-xl shadow-md">
-                    <div class="w-full aspect-video mb-4 rounded-md overflow-hidden border border-gray-600">
-                        <iframe class="w-full h-full" src="https://drive.google.com/file/d/1HVEWSYP1txgjYoc4M5auJWz1ZXnqOqTn/preview" allow="autoplay"></iframe>
-                    </div>
-                    <h3 class="text-white text-2xl font-bold">Academy Class</h3>
-                    <span class="text-[#8491A0] text-sm">TALENTA AI</span>
-                    <p class="text-[#C4C4C4] text-sm mt-4">Microsoft Azure AI Fundamentals</p>
-                    <button onclick="window.open('https://drive.google.com/file/d/1HVEWSYP1txgjYoc4M5auJWz1ZXnqOqTn/view?usp=drive_link', '_blank')" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full text-sm font-semibold transition duration-300 mt-4">Click Here to Visit</button>
-                </div>
-
-            </div>
-        </section>
-
-
-
-
-                <!-- Contact Section -->
-        <section id="contact" class="bg-[#0d0d0d] border-t border-gray-700 py-10 md:py-1">
-        <div class="max-w-screen-md mx-auto px-4">
-            <h2 class="text-white text-3xl font-bold text-center mb-4">Contact</h2>
-            <p class="text-[#C4C4C4] text-center mb-6">
-            Reach out to me for potential collaborations or just to say hello. I'm always open to new opportunities!
-            </p>
-
-            <!-- Social Buttons Grid 2x2 -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 place-items-center">
-            <!-- Email -->
-            <a href="mailto:taufiqtriwinardi25@gmail.com"
-                class="flex items-center space-x-2 bg-[#333333] text-white py-2 px-5 rounded-full hover:bg-[#1a1a1a] transition duration-300 justify-center w-full max-w-[220px] text-sm">
-                <img src="google_mail_gmail_logo_icon_159346.png" alt="Email" class="w-5 h-5" />
-                <span>Email Me</span>
-            </a>
-
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/taufiq-tri-winardi-42961428a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                target="_blank"
-                class="flex items-center space-x-2 bg-[#333] text-white py-2 px-5 rounded-full hover:bg-[#1d1d1d] transition duration-300 justify-center w-full max-w-[220px] text-sm">
-                <img src="linkedinlogo.png" alt="LinkedIn" class="w-5 h-5" />
-                <span>LinkedIn</span>
-            </a>
-
-            <!-- GitHub -->
-            <a href="https://github.com/TaufiqTri08" target="_blank"
-                class="flex items-center space-x-2 bg-[#333] text-white py-2 px-5 rounded-full hover:bg-[#1d1d1d] transition duration-300 justify-center w-full max-w-[220px] text-sm">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" class="w-5 h-5" />
-                <span>GitHub</span>
-            </a>
-
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/taufiq_winardi_" target="_blank"
-                class="flex items-center space-x-2 bg-[#333] text-white py-2 px-5 rounded-full hover:bg-[#1d1d1d] transition duration-300 justify-center w-full max-w-[220px] text-sm">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram" class="w-5 h-5" />
-                <span>Instagram</span>
-            </a>
-            </div>
-
-            <p class="text-center text-gray-500 text-xs mt-6">
-            &copy; 2025 Taufiq Tri Winardi. All rights reserved.
-            </p>
-        </div>
-        </section>
-
-
-
-
-
+  <!-- Skills / Experience Tools -->
+  <section id="experience" class="skills-section container fade-up">
+    <h3 class="section-subtitle">Experience With</h3>
+    <div class="skills-grid">
+      <div class="skill-icon"><img src="html.png" alt="HTML" /></div>
+      <div class="skill-icon"><img src="css.png" alt="CSS" /></div>
+      <div class="skill-icon"><img src="javascript.png" alt="JavaScript" /></div>
+      <div class="skill-icon"><img src="ms office.png" alt="MS Office" /></div>
+      <div class="skill-icon"><img src="figma.png" alt="Figma" /></div>
+      <div class="skill-icon"><img src="Dart-logo.png" alt="Dart" /></div>
+      <div class="skill-icon"><img src="visual-basic.png" alt="VB" /></div>
+      <div class="skill-icon"><img src="new-php-logo.png" alt="PHP" /></div>
+      <div class="skill-icon"><img src="mysql.png" alt="MySQL" /></div>
+      <div class="skill-icon"><img src="Laravel.png" alt="Laravel" /></div>
+      <div class="skill-icon"><img src="java.png" alt="Java" /></div>
+      <div class="skill-icon"><img src="py.png" alt="Python" /></div>
     </div>
+  </section>
 
-    <script>
-        function downloadCV() {
-            alert("CV will be downloaded soon!");
+  <!-- Projects Section -->
+  <section id="projects" class="section container">
+    <h2 class="section-title text-gradient fade-up">Projects</h2>
+    <div class="slider-wrapper">
+      <button class="slider-btn left-btn" aria-label="Slide Left"><i class="bi bi-chevron-left"></i></button>
+      <div class="slider-layout">
+        <!-- Card 1 -->
+        <div class="glass-card fade-up">
+          <div class="card-img-wrapper">
+            <img src="BBIAUTO.png" class="card-img" alt="BBI Auto" />
+          </div>
+          <h3 class="card-title">BBI Auto Aplikasi & Dashboard admin Bengkel Online</h3>
+          <span class="card-subtitle">Flutter & Laravel</span>
+          <p class="card-desc">Made using Flutter & Laravel contains an online workshop application and a workshop
+            application management admin dashboard website.</p>
+          <button onclick="window.open('https://github.com/TaufiqTri08/BBIAUTO1.git', '_blank')" class="card-btn">View
+            Repository</button>
+        </div>
+
+
+        <!-- Card 2 -->
+        <div class="glass-card fade-up" style="transition-delay: 200ms;">
+          <div class="card-img-wrapper">
+            <img src="IdereWeb.png" class="card-img" alt="Idere Web" />
+          </div>
+          <h3 class="card-title">Website Idere</h3>
+          <span class="card-subtitle">Laravel PHP</span>
+          <p class="card-desc">Website created using PHP and the Laravel framework, containing applications for
+            innovator funding.</p>
+          <button onclick="window.open('https://github.com/TaufiqTri08/IdereWebsite', '_blank')" class="card-btn">View
+            Repository</button>
+        </div>
+
+
+        <!-- Card 3 -->
+        <div class="glass-card fade-up">
+          <div class="card-img-wrapper">
+            <img src="IdereMobile.png" class="card-img" alt="Idere Mobile" />
+          </div>
+          <h3 class="card-title">Aplikasi Mobile Idere</h3>
+          <span class="card-subtitle">Android Java</span>
+          <p class="card-desc">Created using Android Studio with Java and SQLite, containing submission of innovator
+            funding to investors.</p>
+          <button onclick="window.open('https://github.com/TaufiqTri08/IdereMobileApps', '_blank')"
+            class="card-btn">View Repository</button>
+        </div>
+
+
+        <!-- Card 4 -->
+        <div class="glass-card fade-up" style="transition-delay: 200ms;">
+          <div class="card-img-wrapper">
+            <img src="ProgramVb.png" class="card-img" alt="Program VB" />
+          </div>
+          <h3 class="card-title">Aplikasi Desktop Kasir</h3>
+          <span class="card-subtitle">Visual Basic</span>
+          <p class="card-desc">Desktop cashier application created using Visual Studio IDE with Visual Basic.</p>
+          <button onclick="window.open('https://github.com/TaufiqTri08/ProgramKasirVBnet', '_blank')"
+            class="card-btn">View Repository</button>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="glass-card fade-up" style="transition-delay: 100ms;">
+          <div class="card-img-wrapper">
+            <img src="GameRap.png" class="card-img" alt="Game Raptor" />
+          </div>
+          <h3 class="card-title">Game Raptor Pukul Hewan</h3>
+          <span class="card-subtitle">Raptor Flowchart</span>
+          <p class="card-desc">Pop-up animal game program made using Raptor, a basic flowchart application with logic
+            control.</p>
+          <button
+            onclick="window.open('https://drive.google.com/file/d/1gbRB6iwhhQRZf3yuhmE6xE5-ScGg106H/view?usp=drive_link', '_blank')"
+            class="card-btn">Download Game</button>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="glass-card fade-up" style="transition-delay: 100ms;">
+          <div class="card-img-wrapper">
+            <img src="ManajemenMusik.png" class="card-img" alt="Manajemen Musik" />
+          </div>
+          <h3 class="card-title">Manajemen Musik</h3>
+          <span class="card-subtitle">Java Desktop</span>
+          <p class="card-desc">Music library program created with Netbeans IDE using Java, managing the library using
+            stacks and queues.</p>
+          <button onclick="window.open('https://github.com/TaufiqTri08/ProgramManajemenMusicJava', '_blank')"
+            class="card-btn">View Repository</button>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="glass-card fade-up">
+          <div class="card-img-wrapper">
+            <img src="ProgramKasir.png" class="card-img" alt="Program Kasir" />
+          </div>
+          <h3 class="card-title">Program Kasir</h3>
+          <span class="card-subtitle">Java Desktop</span>
+          <p class="card-desc">Cashier Program made with Netbeans IDE using Java, containing basic CRUD on a cash
+            register system.</p>
+          <button onclick="window.open('https://github.com/TaufiqTri08/ProgramKasirJava', '_blank')"
+            class="card-btn">View Repository</button>
+        </div>
+      </div>
+      <button class="slider-btn right-btn" aria-label="Slide Right"><i class="bi bi-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- UI/UX Design Section -->
+  <section id="design" class="section container">
+    <h2 class="section-title text-gradient fade-up">Design UI/UX</h2>
+    <div class="slider-wrapper">
+      <button class="slider-btn left-btn" aria-label="Slide Left"><i class="bi bi-chevron-left"></i></button>
+      <div class="slider-layout">
+        <!-- Card 1 -->
+        <div class="glass-card fade-up">
+          <div class="card-img-wrapper">
+            <img src="Teachlink.png" class="card-img" alt="Teach link Point" />
+          </div>
+          <h3 class="card-title">Teach link Point</h3>
+          <span class="card-subtitle">Figma Design</span>
+          <button
+            onclick="window.open('https://www.figma.com/proto/Neq3VCL2QA85sJmA598uP4/Workspace-C.A.T-Boys?node-id=2004-19976&t=SdddDU2Bsp8MX8YH-1', '_blank')"
+            class="card-btn">View Prototype</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="glass-card fade-up" style="transition-delay: 100ms;">
+          <div class="card-img-wrapper">
+            <img src="CitaKlusi.png" class="card-img" alt="CitaKlusi" />
+          </div>
+          <h3 class="card-title">CitaKlusi</h3>
+          <span class="card-subtitle">Figma Design</span>
+          <button
+            onclick="window.open('https://www.figma.com/proto/Neq3VCL2QA85sJmA598uP4/Workspace-C.A.T-Boys?node-id=1029-8157&t=SdddDU2Bsp8MX8YH-1', '_blank')"
+            class="card-btn">View Prototype</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="glass-card fade-up" style="transition-delay: 200ms;">
+          <div class="card-img-wrapper">
+            <img src="RentPlace.png" class="card-img" alt="RentPlace" />
+          </div>
+          <h3 class="card-title">RentPlace</h3>
+          <span class="card-subtitle">Figma Design</span>
+          <button
+            onclick="window.open('https://www.figma.com/proto/jfhv07mPXnW8yd43ZNKj07/ADSI-RentPlace?node-id=0-1&t=pV6vRo7wfA3dh4GD-1', '_blank')"
+            class="card-btn">View Prototype</button>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="glass-card fade-up">
+          <div class="card-img-wrapper">
+            <img src="bgn.png" class="card-img" alt="BGN Mart" />
+          </div>
+          <h3 class="card-title">BGN Mart</h3>
+          <span class="card-subtitle">Figma Design</span>
+          <button class="card-btn">Coming Soon</button>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="glass-card fade-up" style="transition-delay: 100ms;">
+          <div class="card-img-wrapper">
+            <img src="IdeRe.png" class="card-img" alt="IdeRe" />
+          </div>
+          <h3 class="card-title">IdeRe</h3>
+          <span class="card-subtitle">Figma Design</span>
+          <button
+            onclick="window.open('https://www.figma.com/proto/4UirhIM8n3D4o7XirAcVPK/IDERE--P.MOB-?node-id=0-1&t=O8iao9b4kBnhgCgL-1', '_blank')"
+            class="card-btn">View Prototype</button>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="glass-card fade-up" style="transition-delay: 200ms;">
+          <div class="card-img-wrapper">
+            <img src="Dropzone.png" class="card-img" alt="Dropzone" />
+          </div>
+          <h3 class="card-title">Dropzone</h3>
+          <span class="card-subtitle">Figma Design</span>
+          <button
+            onclick="window.open('https://www.figma.com/proto/zOwEqhx2TH3PpvAoockfFy/Dropzone--E-business--V.1?node-id=0-1&t=oWydkGKPJ7egcfjb-1', '_blank')"
+            class="card-btn">View Prototype</button>
+        </div>
+      </div>
+      <button class="slider-btn right-btn" aria-label="Slide Right"><i class="bi bi-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- Competitions & Classes -->
+  <section id="achievements" class="section container">
+    <h2 class="section-title text-gradient fade-up">Achievements & Classes</h2>
+    <div class="slider-wrapper">
+      <button class="slider-btn left-btn" aria-label="Slide Left"><i class="bi bi-chevron-left"></i></button>
+      <div class="slider-layout">
+        <!-- Item 1 -->
+        <div class="glass-card fade-up">
+          <div class="iframe-wrapper">
+            <iframe src="https://drive.google.com/file/d/1VJZe_YnULuuNHxI9l8LHzXYF3Y3_TBYE/preview"
+              allow="autoplay"></iframe>
+          </div>
+          <h3 class="card-title">Competition</h3>
+          <span class="card-subtitle">INDONERIS 2024</span>
+          <p class="card-desc">3rd Runner-up UI/UX Design</p>
+          <button
+            onclick="window.open('https://drive.google.com/file/d/1VJZe_YnULuuNHxI9l8LHzXYF3Y3_TBYE/view?usp=drive_link', '_blank')"
+            class="card-btn">View Certificate</button>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="glass-card fade-up" style="transition-delay: 100ms;">
+          <div class="iframe-wrapper">
+            <iframe src="https://drive.google.com/file/d/1LuDC7ucrwUTGews9nHqVXZV54qGDYCEU/preview"
+              allow="autoplay"></iframe>
+          </div>
+          <h3 class="card-title">Competition</h3>
+          <span class="card-subtitle">UINIC 6.0 2024</span>
+          <p class="card-desc">CAT Boys | Best Favorite Project UI/UX Design</p>
+          <button
+            onclick="window.open('https://drive.google.com/drive/folders/1VQ6va9IenksjktW5QcYPV7hzMUsxaDck?usp=drive_link', '_blank')"
+            class="card-btn">View Detail</button>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="glass-card fade-up">
+          <div class="iframe-wrapper">
+            <iframe src="https://drive.google.com/file/d/1qwdI6p8hzWVY-_eubZtRKNSDPF9EEVt2/preview"
+              allow="autoplay"></iframe>
+          </div>
+          <h3 class="card-title">Internship</h3>
+          <span class="card-subtitle">PT Lima Benua Koneksindo</span>
+          <p class="card-desc">25 Agustus - 5 Desember 2025 Information Technology Division.</p>
+          <button
+            onclick="window.open('https://drive.google.com/file/d/1qwdI6p8hzWVY-_eubZtRKNSDPF9EEVt2/view?usp=sharing', '_blank')"
+            class="card-btn">View Certificate</button>
+        </div>
+
+
+        <!-- Item 4 -->
+        <div class="glass-card fade-up">
+          <div class="iframe-wrapper">
+            <iframe src="https://drive.google.com/file/d/1aQnksaxvgvWdG2Y9bwltLGUtSZ4f5VHR/preview"
+              allow="autoplay"></iframe>
+          </div>
+          <h3 class="card-title">Academy Class</h3>
+          <span class="card-subtitle">DICODING</span>
+          <p class="card-desc">Learn Cloud Basics and Gen AI on AWS</p>
+          <button onclick="window.open('https://www.dicoding.com/certificates/JMZVDR08OZN9', '_blank')"
+            class="card-btn">View Certificate</button>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="glass-card fade-up" style="transition-delay: 100ms;">
+          <div class="iframe-wrapper">
+            <iframe src="https://drive.google.com/file/d/1ck84YSqDviSDXNMP4J-4x7tpFdkILqCQ/preview"
+              allow="autoplay"></iframe>
+          </div>
+          <h3 class="card-title">Academy Class</h3>
+          <span class="card-subtitle">DICODING</span>
+          <p class="card-desc">Learn Basic Project Management</p>
+          <button onclick="window.open('https://www.dicoding.com/certificates/JMZVVQ5O3ZN9', '_blank')"
+            class="card-btn">View Certificate</button>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="glass-card fade-up" style="transition-delay: 200ms;">
+          <div class="iframe-wrapper">
+            <iframe src="https://drive.google.com/file/d/1HVEWSYP1txgjYoc4M5auJWz1ZXnqOqTn/preview"
+              allow="autoplay"></iframe>
+          </div>
+          <h3 class="card-title">Academy Class</h3>
+          <span class="card-subtitle">TALENTA AI</span>
+          <p class="card-desc">Microsoft Azure AI Fundamentals</p>
+          <button
+            onclick="window.open('https://drive.google.com/file/d/1HVEWSYP1txgjYoc4M5auJWz1ZXnqOqTn/view?usp=drive_link', '_blank')"
+            class="card-btn">View Certificate</button>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="glass-card fade-up" style="transition-delay: 200ms;">
+          <div class="iframe-wrapper">
+            <iframe src="https://drive.google.com/file/d/11XmFyoreSfiuiNNG7MsdC1rXhevBtqPD/preview"
+              allow="autoplay"></iframe>
+          </div>
+          <h3 class="card-title">Academy Class</h3>
+          <span class="card-subtitle">DICODING</span>
+          <p class="card-desc">Learn Google Cloud Basics</p>
+          <button onclick="window.open('https://www.dicoding.com/certificates/NVP7QVEW4ZR0', '_blank')"
+            class="card-btn">View Certificate</button>
+        </div>
+      </div>
+      <button class="slider-btn right-btn" aria-label="Slide Right"><i class="bi bi-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container fade-up">
+      <h2 class="section-title text-gradient">Get In Touch</h2>
+      <p class="contact-text">
+        Reach out to me for potential collaborations or just to say hello. I'm always open to new opportunities!
+      </p>
+
+      <div class="social-grid">
+        <a href="mailto:taufiqtriwinardi25@gmail.com" class="social-btn">
+          <img src="google_mail_gmail_logo_icon_159346.png" alt="Email" style="filter: none;" />
+          <span>Email Me</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/taufiq-tri-winardi-42961428a/" target="_blank" class="social-btn">
+          <img src="linkedinlogo.png" alt="LinkedIn" style="filter: none;" />
+          <span>LinkedIn</span>
+        </a>
+
+        <a href="https://github.com/TaufiqTri08" target="_blank" class="social-btn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" />
+          <span>GitHub</span>
+        </a>
+
+        <a href="https://www.instagram.com/taufiq_winardi_" target="_blank" class="social-btn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram"
+            style="filter: none;" />
+          <span>Instagram</span>
+        </a>
+      </div>
+
+      <div class="footer">
+        &copy; 2025 Taufiq Tri Winardi. Designed with modern aesthetics.
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Intersection Observer for fade-up animations
+    document.addEventListener('DOMContentLoaded', () => {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.fade-up').forEach(element => {
+        observer.observe(element);
+      });
+
+      // Hover glow effect for glass cards
+      document.querySelectorAll('.glass-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          card.style.setProperty('--mouse-x', `${x}px`);
+          card.style.setProperty('--mouse-y', `${y}px`);
+        });
+      });
+
+      // Slider button logic
+      document.querySelectorAll('.slider-wrapper').forEach(wrapper => {
+        const slider = wrapper.querySelector('.slider-layout');
+        const leftBtn = wrapper.querySelector('.left-btn');
+        const rightBtn = wrapper.querySelector('.right-btn');
+
+        if (leftBtn && rightBtn && slider) {
+          leftBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: -340, behavior: 'smooth' });
+          });
+
+          rightBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: 340, behavior: 'smooth' });
+          });
         }
-    </script>
+      });
+    });
+  </script>
 </body>
+
 </html>
-<script>
-    // Tailwind CSS initialization  
-    // Tailwind CSS configuration
-    tailwind.config = {
-        theme: {
-            extend: {
-                colors: {
-                    'primary': '#FF855F',
-                    'secondary': '#5BADFF',
-                    'background': '#161513',
-                },
-            },
-        },
-    };
